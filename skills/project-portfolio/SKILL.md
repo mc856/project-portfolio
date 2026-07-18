@@ -23,6 +23,8 @@ When the user starts tracking a new project, create its file by **routing to a t
 
 **Bootstrap from evidence, not from a blank form.** Making the user hand-fill a template is the main reason tracking systems die on day one. Draft the file from what already exists: the current conversation, the project folder (README, `git log`, TODO comments), and any agent memory available in the environment (don't assume a specific memory location or format — capabilities differ across agents). Two hard rules: **show the draft and get the user's confirmation before writing it to disk**, and **never invent a goal** — if the goal isn't evident from the material, ask; an aspirational-sounding but wrong goal poisons every future priority ranking.
 
+**Register the file where future sessions will look.** When the project has a repository (or a main folder with an agent instruction file), offer to add one pointer line to its `AGENTS.md` / `CLAUDE.md`: `Part of "<project>" — long-term state tracked at ~/project-portfolio/<slug>.md`. A session opened inside that folder later has no other way to discover the portfolio file. The instruction file belongs to the repo — ask before touching it, and keep it to that one line.
+
 ## Sync entry point: `_watchlist.md`
 
 For any status or "what's next" request, read `_watchlist.md` first. It exists so the user never has to supply dates or parameters from memory:
