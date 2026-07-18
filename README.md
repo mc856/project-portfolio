@@ -30,17 +30,26 @@ This is deliberately more structured than agent "memory" features: goals, trigge
 
 ## Install
 
-**Claude Code / Claude Cowork**
+**Any agent (recommended)** — auto-detects Claude Code / Codex / Cursor and installs to each:
 
 ```bash
-git clone https://github.com/mc856/project-portfolio ~/.claude/skills/project-portfolio
+npx skills add mc856/project-portfolio
 ```
 
-**Codex**
+**Claude Code plugin marketplace:**
+
+```
+/plugin marketplace add mc856/project-portfolio
+/plugin install project-portfolio
+```
+
+**Codex (manual):**
 
 ```bash
-git clone https://github.com/mc856/project-portfolio ~/.agents/skills/project-portfolio
+git clone https://github.com/mc856/project-portfolio /tmp/pp && cp -r /tmp/pp/skills/project-portfolio ~/.agents/skills/
 ```
+
+**Claude Cowork:** download `project-portfolio.skill` from [Releases](https://github.com/mc856/project-portfolio/releases) and drop it into a chat — it installs via the "Save skill" button.
 
 Then just talk to your agent: *"start tracking my job hunt"* or *"track my PRs on acme/widgets"*.
 
@@ -48,10 +57,10 @@ Then just talk to your agent: *"start tracking my job hunt"* or *"track my PRs o
 
 | Template | For |
 |---|---|
-| [`project.md`](templates/project.md) | anything long-term — the generic shape |
-| [`github.md`](templates/github.md) | your pull requests and issues across GitHub repos |
-| [`job-hunt.md`](templates/job-hunt.md) | applications, interviews, follow-ups |
-| [`side-projects.md`](templates/side-projects.md) | several personal projects competing for limited time |
+| [`project.md`](skills/project-portfolio/templates/project.md) | anything long-term — the generic shape |
+| [`github.md`](skills/project-portfolio/templates/github.md) | your pull requests and issues across GitHub repos |
+| [`job-hunt.md`](skills/project-portfolio/templates/job-hunt.md) | applications, interviews, follow-ups |
+| [`side-projects.md`](skills/project-portfolio/templates/side-projects.md) | several personal projects competing for limited time |
 
 Each template ships its own *check recipe* (how to fetch fresh state) and domain priority notes. Adding a new domain = writing one markdown file. PRs for new templates welcome.
 

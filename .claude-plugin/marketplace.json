@@ -1,0 +1,15 @@
+{
+  "name": "project-portfolio",
+  "owner": {
+    "name": "Jun",
+    "url": "https://github.com/mc856"
+  },
+  "plugins": [
+    {
+      "name": "project-portfolio",
+      "source": "./",
+      "description": "Long-term project memory for coding agents — a cross-project state layer: one markdown file per project plus a global watchlist with date/event triggers.",
+      "version": "0.2.0"
+    }
+  ]
+}

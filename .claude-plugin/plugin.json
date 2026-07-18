@@ -1,0 +1,9 @@
+{
+  "name": "project-portfolio",
+  "version": "0.2.0",
+  "description": "Long-term project memory for coding agents — a cross-project state layer: one markdown file per project plus a global watchlist with date/event triggers.",
+  "author": {
+    "name": "Jun",
+    "url": "https://github.com/mc856"
+  }
+}
